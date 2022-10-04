@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="heartbeatNew" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3X-TU-psK">
+                                <rect key="frame" x="107" y="448" width="200" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="BG4-j5-C2M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Trk-8A-wPg">
+                                <rect key="frame" x="0.0" y="74" width="414" height="670"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="900" constant="670" id="iHE-zg-w8G"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmK-0w-8XS">
+                                <rect key="frame" x="140" y="752" width="134" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Check HeartRate"/>
+                                <connections>
+                                    <action selector="toggleVid:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WHl-B5-tjR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dmK-0w-8XS" firstAttribute="top" secondItem="Trk-8A-wPg" secondAttribute="bottom" constant="8" id="LsM-Bz-yma"/>
+                            <constraint firstItem="t3X-TU-psK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QVl-zy-Qtb"/>
+                            <constraint firstItem="Trk-8A-wPg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZyW-g4-sF3"/>
+                            <constraint firstItem="Trk-8A-wPg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="djt-hG-QZ0"/>
+                            <constraint firstItem="dmK-0w-8XS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lUY-Xz-AXm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Trk-8A-wPg" secondAttribute="trailing" id="mYQ-ui-3QW"/>
+                            <constraint firstItem="t3X-TU-psK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vHI-QQ-bJR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="heartBeatLabel" destination="t3X-TU-psK" id="F7x-pZ-x4O"/>
+                        <outlet property="heartbeatButton" destination="dmK-0w-8XS" id="gLF-HI-0Zr"/>
+                        <outlet property="preview" destination="Trk-8A-wPg" id="c0B-hw-8kb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
